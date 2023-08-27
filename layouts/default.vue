@@ -1,19 +1,20 @@
 <template>
-  <main>
-    <HeroWeb />
-    <AboutSection />
-  </main>
+  <div id="app">
+    <HeaderWeb />
+    <Nuxt />
+    <FooterWeb />
+  </div>
 </template>
 
 <script>
 // Memanggil component sesuai lokasi masing - masing file
-import HeroWeb from '@/components/HeroWeb.vue'
-import AboutSection from '@/components/AboutSection.vue'
+import HeaderWeb from '@/components/HeaderWeb.vue'
+import FooterWeb from '@/components/FooterWeb.vue'
 export default {
   // Dideklarasikan agar dapat diakses oleh template
   components: {
-    HeroWeb,
-    AboutSection,
+    HeaderWeb,
+    FooterWeb,
   },
 }
 </script>
