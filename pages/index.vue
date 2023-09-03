@@ -15,6 +15,29 @@ export default {
     HeroWeb,
     AboutSection,
   },
+  data() {
+    return {
+      // Daftar task
+      about: [
+        {
+          icon: 'truck',
+          title: 'Delivery Services',
+        },
+        {
+          icon: 'arrow-right-arrow-left',
+          title: 'Shipping & Return',
+        },
+        {
+          icon: 'percent',
+          title: 'Promotion',
+        },
+        {
+          icon: 'user',
+          title: '24 Hours Service',
+        },
+      ],
+    }
+  },
 }
 </script>
 <style></style>

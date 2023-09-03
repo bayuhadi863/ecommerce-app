@@ -6,35 +6,11 @@
     </div>
     <div class="container mt-5 pt-5">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-        <div class="col">
+        <div v-for="(service, index) in about" :key="index" class="col">
           <div class="card h-100 py-5">
             <div class="card-body d-flex flex-column align-items-center gap-4">
-              <fa :icon="['fas', 'truck']" size="3x" />
-              <h5 class="card-title">Delivery Services</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 py-5">
-            <div class="card-body d-flex flex-column align-items-center gap-4">
-              <fa :icon="['fas', 'arrow-right-arrow-left']" size="3x" />
-              <h5 class="card-title">Shipping & Return</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 py-5">
-            <div class="card-body d-flex flex-column align-items-center gap-4">
-              <fa :icon="['fas', 'percent']" size="3x" />
-              <h5 class="card-title">Promotion</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 py-5">
-            <div class="card-body d-flex flex-column align-items-center gap-4">
-              <fa :icon="['fas', 'user']" size="3x" />
-              <h5 class="card-title">24 Hours Service</h5>
+              <fa :icon="['fas', service.icon]" size="3x" />
+              <h5 class="card-title text-center">{{ service.title }}</h5>
             </div>
           </div>
         </div>
@@ -42,6 +18,33 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      // Daftar task
+      about: [
+        {
+          icon: 'truck',
+          title: 'Delivery Services',
+        },
+        {
+          icon: 'arrow-right-arrow-left',
+          title: 'Shipping & Return',
+        },
+        {
+          icon: 'percent',
+          title: 'Promotion',
+        },
+        {
+          icon: 'user',
+          title: '24 Hours Service',
+        },
+      ],
+    }
+  },
+}
+</script>
 
 <style scoped>
 .card {
